@@ -359,17 +359,23 @@ Return ONLY valid JSON (no markdown, no explanation):
       <nav className="border-b bg-card/70 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Button variant="outline" size="default" onClick={() => navigate("/dashboard")}>
-              <ArrowLeft className="h-4 w-4 mr-1" />
-              <span className="hidden sm:inline">Back</span>
-            </Button>
+            {/* BACK BUTTON — HIDDEN ON MOBILE, VISIBLE ON DESKTOP */}
+            <div className="hidden md:block">
+              <Button variant="outline" size="default" onClick={() => navigate("/dashboard")}>
+                <ArrowLeft className="h-4 w-4 mr-1" />
+                <span>Back</span>
+              </Button>
+            </div>
 
             <div className="flex items-center gap-2">
-              <div className="p-2 bg-gradient-primary rounded-lg">
-                <Brain className="h-6 w-6 text-primary-foreground" />
+              <div
+                className="p-2 bg-gradient-primary rounded-lg cursor-pointer"
+                onClick={() => navigate("/dashboard")}
+              >
+                <Brain className="h-7 w-7 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-lg font-bold leading-tight">{session.role}</h1>
+                <h1 className="text-xl font-bold leading-tight">{session.role}</h1>
                 <p className="text-xs text-muted-foreground -mt-0.5">{session.experience}</p>
               </div>
             </div>
