@@ -426,10 +426,7 @@ export default function Dashboard() {
 
 
       {/* Stats Section */}
-      <section
-        id="create-session-section"
-        className="container mx-auto px-4 mt-6 mb-12 grid gap-6 md:grid-cols-4"
-      >
+      <section className="container mx-auto px-4 mt-6 mb-12 grid gap-6 md:grid-cols-4">
         {/* Total Sessions */}
         <Card className="p-6 border rounded-2xl bg-card hover:shadow-lg hover:-translate-y-1 transition-all">
           <div className="flex items-center justify-between">
