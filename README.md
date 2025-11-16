@@ -5,7 +5,7 @@
 ---
 
 ## 🔗 Live Demo (Deployed on Vercel)
-**http://preptor-ai-flax.vercel.app/**
+**https://preptor-ai.vercel.app/**
 
 <p align="center">
   <img src="./preptor-ai-preview.png" width="90%" />
