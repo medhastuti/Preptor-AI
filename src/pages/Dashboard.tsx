@@ -529,7 +529,10 @@ export default function Dashboard() {
         </Card>
 
         {/* Daily Streak */}
-        <Card className="p-6 border rounded-2xl bg-card hover:shadow-lg hover:-translate-y-1 transition-all">
+        <Card 
+          id="create-session-section"
+          className="p-6 border rounded-2xl bg-card hover:shadow-lg hover:-translate-y-1 transition-all"
+        >
           <div className="flex items-center justify-between">
             <div>
               <h4 className="text-lg font-semibold">Daily Streak</h4>
