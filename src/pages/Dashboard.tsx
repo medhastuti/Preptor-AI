@@ -1,4 +1,3 @@
-// Enhanced Dashboard UI with profile header, greeting, and improved layout
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -801,12 +800,12 @@ export default function Dashboard() {
                     onClick={() =>
                       setGoals(goals.map(goal =>
                         goal.id === g.id
-                          ? { ...goal, progress: Math.min(goal.progress + 10, 100) }
+                          ? { ...goal, progress: Math.max(goal.progress - 10, 0) }
                           : goal
                       ))
                     }
                   >
-                    +10%
+                    - 10%
                   </Button>
 
                   <Button
@@ -815,12 +814,12 @@ export default function Dashboard() {
                     onClick={() =>
                       setGoals(goals.map(goal =>
                         goal.id === g.id
-                          ? { ...goal, progress: Math.max(goal.progress - 10, 0) }
+                          ? { ...goal, progress: Math.min(goal.progress + 10, 100) }
                           : goal
                       ))
                     }
                   >
-                    -10%
+                    + 10%
                   </Button>
                 </div>
               </div>
