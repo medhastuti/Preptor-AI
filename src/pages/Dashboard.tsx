@@ -56,6 +56,7 @@ export default function Dashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
+    window.scrollTo(0, 0);
     navigate("/login");
   };
 
