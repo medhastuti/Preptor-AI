@@ -361,7 +361,12 @@ Return ONLY valid JSON (no markdown, no explanation):
           <div className="flex items-center gap-4">
             {/* BACK BUTTON — HIDDEN ON MOBILE, VISIBLE ON DESKTOP */}
             <div className="hidden md:block">
-              <Button variant="outline" size="default" onClick={() => navigate("/dashboard")}>
+              <Button variant="outline" size="default" 
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("/dashboard");
+                }}
+              >
                 <ArrowLeft className="h-4 w-4 mr-1" />
                 <span>Back</span>
               </Button>
@@ -370,7 +375,10 @@ Return ONLY valid JSON (no markdown, no explanation):
             <div className="flex items-center gap-2">
               <div
                 className="p-2 bg-gradient-primary rounded-lg cursor-pointer"
-                onClick={() => navigate("/dashboard")}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  navigate("/dashboard");
+                }}
               >
                 <Brain className="h-7 w-7 text-primary-foreground" />
               </div>
