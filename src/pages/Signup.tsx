@@ -37,6 +37,7 @@ export default function Signup() {
       title: "Account created!",
       description: "Welcome to Interview Prep AI.",
     });
+    window.scrollTo(0, 0);
     navigate("/dashboard");
   };
 
