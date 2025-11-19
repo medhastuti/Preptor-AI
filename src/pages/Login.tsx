@@ -25,6 +25,7 @@ export default function Login() {
         title: "Welcome back!",
         description: "You've successfully logged in.",
       });
+      window.scrollTo(0, 0);
       navigate("/dashboard");
     } else {
       toast({
