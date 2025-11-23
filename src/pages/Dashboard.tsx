@@ -469,9 +469,9 @@ export default function Dashboard() {
                 );
 
                 const estimatedHours =
-                  totalSessions * 0.4 + // 25 min each
-                  totalQuestions * 0.05 + // ~3 min each question
-                  Math.min(1, totalSessions * 0.03); // small boost
+                  totalSessions * 0.25 +
+                  totalQuestions * 0.03 +
+                  Math.min(1, totalSessions * 0.02);
 
                 return (
                   <>
@@ -536,7 +536,8 @@ export default function Dashboard() {
               <h4 className="text-lg font-semibold">Daily Streak</h4>
 
               {(() => {
-                const streak = Math.floor(Math.random() * 5) + 1; // 1 to 5
+                const totalSessions = sessions.length;
+                const streak = Math.floor(totalSessions / 2); // 2 sessions = 1 streak
 
                 return (
                   <p className="text-3xl font-bold mt-2">
